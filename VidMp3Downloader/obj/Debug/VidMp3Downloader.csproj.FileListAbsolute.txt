@@ -1,0 +1,10 @@
+C:\Users\Sebastian Lindgren\source\repos\VidMp3Downloader\VidMp3Downloader\bin\Debug\VidMp3Downloader.exe.config
+C:\Users\Sebastian Lindgren\source\repos\VidMp3Downloader\VidMp3Downloader\bin\Debug\VidMp3Downloader.exe
+C:\Users\Sebastian Lindgren\source\repos\VidMp3Downloader\VidMp3Downloader\bin\Debug\VidMp3Downloader.pdb
+C:\Users\Sebastian Lindgren\source\repos\VidMp3Downloader\VidMp3Downloader\obj\Debug\VidMp3Downloader.csprojAssemblyReference.cache
+C:\Users\Sebastian Lindgren\source\repos\VidMp3Downloader\VidMp3Downloader\obj\Debug\VidMp3Downloader.Form1.resources
+C:\Users\Sebastian Lindgren\source\repos\VidMp3Downloader\VidMp3Downloader\obj\Debug\VidMp3Downloader.Properties.Resources.resources
+C:\Users\Sebastian Lindgren\source\repos\VidMp3Downloader\VidMp3Downloader\obj\Debug\VidMp3Downloader.csproj.GenerateResource.cache
+C:\Users\Sebastian Lindgren\source\repos\VidMp3Downloader\VidMp3Downloader\obj\Debug\VidMp3Downloader.csproj.CoreCompileInputs.cache
+C:\Users\Sebastian Lindgren\source\repos\VidMp3Downloader\VidMp3Downloader\obj\Debug\VidMp3Downloader.exe
+C:\Users\Sebastian Lindgren\source\repos\VidMp3Downloader\VidMp3Downloader\obj\Debug\VidMp3Downloader.pdb
