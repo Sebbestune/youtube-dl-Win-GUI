@@ -8,7 +8,7 @@ Binary file tested to run on Windows 10 Home, it should work on some other Windo
 If you want to help developing the app: Visual Studio is required. So far developed with Visual Studio 2017.
 ## How to use:
 ### If you want to help out with the app
-Clone this git repository and use the app by (probably first updating youtube-dl by the above command and then) starting the "/bin/Release/VidMp3Downloader.exe". 
+Clone this git repository and use the app by (probably first updating youtube-dl by the above command and then) starting the "/bin/Release/VidMp3Downloader.exe". When it comes to development just use Visual Studio, you know what to do ;)
 ### If you just want to use the app
 Either clone the app or download these 4 files into the same folder:
   - https://github.com/Sebbestune/youtube-dl-GUI/blob/master/VidMp3Downloader/bin/Release/VidMp3Downloader.exe
