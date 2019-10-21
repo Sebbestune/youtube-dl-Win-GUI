@@ -20,17 +20,24 @@ After that run the app by updating youtube-dl and then starting VidMp3Downloader
 
 ## Some more things I'm planning to work on in the future:
 [ ] Better name for application
+
 [ ] Easier download options for downloading the application itself for people that simply want to use the application and not be a part of the development 
+
 (Right now this can be done by downloading the following files into the same folder: 
   - https://github.com/Sebbestune/youtube-dl-GUI/blob/master/VidMp3Downloader/bin/Release/VidMp3Downloader.exe
   - https://github.com/Sebbestune/youtube-dl-GUI/blob/master/VidMp3Downloader/bin/Release/ffmpeg.exe
   - https://github.com/Sebbestune/youtube-dl-GUI/blob/master/VidMp3Downloader/bin/Release/ffprobe.exe
   - https://github.com/Sebbestune/youtube-dl-GUI/blob/master/VidMp3Downloader/bin/Release/youtube-dl.exe
 )
+
 [ ] Automatic update of youtube-dl at start of application
+
 [ ] Application should download necessary dependencies when not present (after asking user)
+
 [ ] Fix icon
+
 [ ] Possible GUI fixes such as thinking through where to put buttons and what text should say etc.
+
 
 This is a hobby project and was done during approximately 1-2 days since I thought it could be a nice idea to make a GUI. No extra thought were given about naming of variables and the like. Refactoring of code and increased documentation might be done in the future in case the project gets any traction.
 
