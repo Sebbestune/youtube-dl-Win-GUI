@@ -1,11 +1,11 @@
 # Youtube-dl-GUI
 A simple GUI for the youtube-dl bash utility for Windows.
 
-Notice that if youtube-dl is updated as of now the utility will stop working and wait for you to first update youtube-dl in the command window. This is done through: "youtube-dl -U" (more info: https://github.com/ytdl-org/youtube-dl ).
+Notice that if the youtube-dl.exe component is not updated, as of now the gui utility will stop working and wait for you to first manually update youtube-dl in the command console. This is done through opening Command Prompt or Powershell and writing: "youtube-dl.exe -U" (more info: https://github.com/ytdl-org/youtube-dl ).
 
 ### Prerequisites
 Binary file tested to run on Windows 10 Home, it should work on some other Windows systems as well.
-If you want to help developing the app: Visual Studio is required. So far developed with Visual Studio 2017.
+If you want to help developing the app: Visual Studio is recommended. So far developed with Visual Studio 2017.
 ## How to use:
 ### If you want to help out with the app
 Clone this git repository and use the app by (probably first updating youtube-dl by the above command and then) starting the "/bin/Release/VidMp3Downloader.exe". When it comes to development just use Visual Studio, you know what to do ;)
@@ -18,7 +18,7 @@ Either clone the app or download these 4 files into the same folder:
 
 After that run the app by updating youtube-dl and then starting VidMp3Downloader.exe 
 
-## Some more things I'm planning to work on in the future:
+## Some more things planned to be fixed:
 [ ] Better name for application
 
 [ ] Easier download options for downloading the application itself for people that simply want to use the application and not be a part of the development 
