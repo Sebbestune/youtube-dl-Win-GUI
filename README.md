@@ -44,5 +44,3 @@ After that run the app by updating youtube-dl and then starting VidMp3Downloader
 
 
 This is a hobby project and was done during approximately 1-2 days since I thought it could be a nice idea to make a GUI. No extra thought were given about naming of variables and the like. Refactoring of code and increased documentation might be done in the future in case the project gets any traction.
-
-//Sebastian
