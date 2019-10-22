@@ -34,6 +34,10 @@ After that run the app by updating youtube-dl and then starting VidMp3Downloader
 
 [ ] Application should download necessary dependencies when not present (after asking user)
 
+[ ] Better naming of variables, code-refactoring
+
+[ ] Code cleanup and removing uneccessary files from github solution
+
 [ ] Fix icon
 
 [ ] Possible GUI fixes such as thinking through where to put buttons and what text should say etc.
