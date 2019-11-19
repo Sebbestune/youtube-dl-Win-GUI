@@ -21,7 +21,7 @@ After that run the app by starting VidMp3Downloader.exe and downloading the nece
 - [x] Easier download options for downloading the application itself for people that simply want to use the application and not be a part of the development 
 - [x] Automatic update of youtube-dl at start of application
 - [x] Application should download necessary dependencies when not present (after asking user)
-- [x]Better naming of variables, code-refactoring
+- [x] Better naming of variables, code-refactoring
 - [x] Code cleanup and removing uneccessary files from github solution
 - [ ] Fix icon
 - [x] Possible GUI fixes such as thinking through where to put buttons and what text should say etc.
