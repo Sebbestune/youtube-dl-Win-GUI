@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.IO;
+using System.Net;
 
 //https://stackoverflow.com/questions/9679375/run-an-exe-from-c-sharp-code
 
@@ -19,13 +21,71 @@ namespace VidMp3Downloader
         {
             InitializeComponent();
 
+            string dependecyyoutube_dl = @"youtube-dl.exe";
+            string dependecyffmpeg = @"ffmpeg.exe";
+            string dependecyffprobe = @"ffprobe.exe";
+            Console.WriteLine("Downloading dependency files");
+            if (!File.Exists(dependecyyoutube_dl)) {
+
+                string message = "youtube-dl was not found in this folder. Proceed with downloading it now?";
+                string title = "Downloading dependencies";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(message, title, buttons);
+                if (result == DialogResult.Yes)
+                {
+                    using (var client = new WebClient())
+                    {
+                        client.DownloadFile("https://github.com/Sebbestune/youtube-dl-Win-GUI/blob/master/VidMp3Downloader/bin/Release/youtube-dl.exe?raw=true", "youtube-dl.exe");
+                    }
+                }
+                else
+                {
+                    System.Environment.Exit(0);
+                }
+            }
+            if (!File.Exists(dependecyffmpeg))
+            {
+                string message = "ffmpeg was not found in this folder. Proceed with downloading it now?";
+                string title = "Downloading dependencies";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(message, title, buttons);
+                if (result == DialogResult.Yes)
+                {
+                    using (var client = new WebClient())
+                    {
+                        client.DownloadFile("https://github.com/Sebbestune/youtube-dl-Win-GUI/blob/master/VidMp3Downloader/bin/Release/ffmpeg.exe?raw=true", "ffmpeg.exe");
+                    }
+                }
+                else
+                {
+                    System.Environment.Exit(0);
+                }  
+            }
+            if (!File.Exists(dependecyffprobe))
+            {
+                string message = "ffprobe was not found in this folder. Proceed with downloading it now?";
+                string title = "Downloading dependencies";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(message, title, buttons);
+                if (result == DialogResult.Yes)
+                {
+                    using (var client = new WebClient())
+                    {
+                        client.DownloadFile("https://github.com/Sebbestune/youtube-dl-Win-GUI/blob/master/VidMp3Downloader/bin/Release/ffprobe.exe?raw=true", "ffprobe.exe");
+                    }
+                }
+                else
+                {
+                    System.Environment.Exit(0);
+                }
+            }
+
             ProcessStartInfo startInfo = new ProcessStartInfo();
             startInfo.CreateNoWindow = false;
             startInfo.UseShellExecute = false;
             startInfo.FileName = "youtube-dl.exe";
             startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            if (radioButton2.Checked)
-                startInfo.Arguments = "-U";
+            startInfo.Arguments = "-U";
             
             try
             {
@@ -40,12 +100,7 @@ namespace VidMp3Downloader
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void downloadButton_Click(object sender, EventArgs e)
         {
             // Use ProcessStartInfo class
             ProcessStartInfo startInfo = new ProcessStartInfo();
@@ -53,45 +108,10 @@ namespace VidMp3Downloader
             startInfo.UseShellExecute = false;
             startInfo.FileName = "youtube-dl.exe";
             startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            if (radioButton2.Checked)
-                startInfo.Arguments = "-o \"music\\" + textBox2.Text + ".mp3\" -x --audio-format mp3 \"" + textBox1.Text + "\"";
+            if (mp3RadioButton.Checked)
+                startInfo.Arguments = "--extract-audio --audio-format mp3 -i -o \"music\\%(title)s.%(ext)s\" \"" + urlTextBox.Text + "\"";
             else
-                startInfo.Arguments = "-o \"videos\\" + textBox2.Text + ".%(ext)s\" \"" + textBox1.Text + "\"";
-
-            try
-            {
-                // Start the process with the info we specified.
-                // Call WaitForExit and then the using statement will close.
-                using (Process exeProcess = Process.Start(startInfo))
-                {
-                    exeProcess.WaitForExit();
-                }
-            }
-            catch
-            {
-                // Log error.
-                MessageBox.Show("Something went wrong with video/mp3 download...");
-            }
-            
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            // Use ProcessStartInfo class
-            ProcessStartInfo startInfo = new ProcessStartInfo();
-            startInfo.CreateNoWindow = false;
-            startInfo.UseShellExecute = false;
-            startInfo.FileName = "youtube-dl.exe";
-            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            if (radioButton2.Checked)
-                startInfo.Arguments = "--extract-audio --audio-format mp3 -i -o \"playlist_music\\%(title)s.%(ext)s\" \"" + textBox3.Text + "\"";
-            else
-                startInfo.Arguments = " -i -o \"playlist_videos\\%(title)s.%(ext)s\" \"" + textBox3.Text + "\"";
+                startInfo.Arguments = " -i -o \"videos\\%(title)s.%(ext)s\" \"" + urlTextBox.Text + "\"";
 
             //youtube-dl --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" <url to playlist>
 
